@@ -50,7 +50,10 @@ export default async function Header() {
           <Link className="hover:underline cursor-pointer" href="/">
             Home
           </Link>
-          <Link className="hover:underline cursor-pointer" href="/dashboard">
+          <Link
+            className="hover:underline cursor-pointer"
+            href={`${user ? "/dashboard" : "/api/auth/login"}`}
+          >
             Profile
           </Link>
         </nav>
